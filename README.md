@@ -54,3 +54,7 @@ The predicted landmarks plus the truth locations would be saved in csv files. Al
 Notice that, in the save csv of output folder, the x and y columns may changed from the original ones in targer_dir:
 x->y
 y->x
+
+## Network Architecture
+
+![Alt text](Arch.png?raw=true "Title")

@@ -34,8 +34,9 @@ for example for a machine: <br>
 > landmarks='2,12,11,10,5' <br>
 > python3 Pr_LandMarkDetection_FlatArc+HeatMap.py --mode 'train'   --input_dir   $input_dir     --target_dir  $target_dir    --checkpoint  $checkpoint     --output_dir  $output_dir     --landmarks  $landmarks <br>
 
-of the checkpoint is empty, the new training session would be done otherwise the training would be continued from previous session.
+of the checkpoint is empty, the new training session would be done otherwise the training would be continued from previous session.<br>
 
+Do not forget to set the suitable number of epochs in the python scripts.
 
 ## predicting
 

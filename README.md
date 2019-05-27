@@ -1,1 +1,56 @@
 # Train-Predict-Landmarks-by-flat
+
+This network architecture is presented in which detects the locations of landmarks for vocal tract area.<br>
+The network is based on heatmap generation and location of the argmax.
+
+
+## set up
+code is based on the tensorflow 1.14 which the embedded keras is also used.
+
+## data
+it is assumed that, the png files are stored in a folder and corresponding cvs files with same filenames are located in another folder and contains the x,y locations of the landmarks. <br>
+For example one image and corresponding landmark file is placed in data folder.<br>
+The landmark file contanis 20 landmarks.<br>
+
+## training
+The mentioned network were able to handle just 5 heatmaps for 256x256 images and batch size of 10.<br>
+Therefore for having a full machine predicting 20 landmarks we need to train 4 different netwroks.<br>
+The desired landmark for each network can be set by arguments.<br>
+
+the input arguments are as follow: <br>
+"--mode", choices=["train", "test"])<br>
+"--input_dir", the path of the directory contains png files <br>
+"--target_dir",  the path of directory contains csv files of corressponding ladnmarks <br>
+"--checkpoint",  the path of directorry for the trained model <br> 
+"--output_dir",  the path of output, in training mode the trained model would be saved here and in testing mode the results.<br>
+"--landmarks",  the string contains the number of desired landmarks<br>
+
+for example for a machine: <br>
+
+> target_dir='../Images_Data/CV_10_Folding/Fold_1/temp_train_lm/' <br>
+> input_dir='../Images_Data/CV_10_Folding/Fold_1/temp_train_png/' <br>
+> checkpoint='../Images_Data/CV_10_Folding/Fold_1/Models/Models_flat/Models_lm_2/' <br>
+> output_dir='../Images_Data/CV_10_Folding/Fold_1/Models/Models_flat/Models_lm_2/' <br>
+> landmarks='2,12,11,10,5' <br>
+> python3 Pr_LandMarkDetection_FlatArc+HeatMap.py --mode 'train'   --input_dir   $input_dir     --target_dir  $target_dir    --checkpoint  $checkpoint     --output_dir  $output_dir     --landmarks  $landmarks <br>
+
+of the checkpoint is empty, the new training session would be done otherwise the training would be continued from previous session.
+
+
+## predicting
+
+> target_dir='../Images_Data/CV_10_Folding/Fold_1/temp_test_lm/'
+> input_dir='../Images_Data/CV_10_Folding/Fold_1/temp_test_png/'
+> checkpoint='../Images_Data/CV_10_Folding/Fold_1/Models/Models_flat/Models_lm_2/'
+> output_dir='../Images_Data/CV_10_Folding/Fold_1/Results/Models_flat/Models_lm_2/'
+> landmarks='2,12,11,10,5'
+> python3 Pr_LandMarkDetection_FlatArc+HeatMap.py --mode 'test'   --input_dir   $input_dir     --target_dir  $target_dir    --checkpoint  $checkpoint     --output_dir  $output_dir     --landmarks  $landmarks 
+
+The predicted landmarks plus the truth locations would be saved in csv files. Also a visualization image of the prediction will be saved:
+
+![Alt text](output-sample.png?raw=true "Title")
+
+
+Notice that, in the save csv of output folder, the x and y columns may changed from the original ones in targer_dir:
+x->y
+y->x

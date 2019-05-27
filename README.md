@@ -39,11 +39,11 @@ of the checkpoint is empty, the new training session would be done otherwise the
 
 ## predicting
 
-> target_dir='../Images_Data/CV_10_Folding/Fold_1/temp_test_lm/'
-> input_dir='../Images_Data/CV_10_Folding/Fold_1/temp_test_png/'
-> checkpoint='../Images_Data/CV_10_Folding/Fold_1/Models/Models_flat/Models_lm_2/'
-> output_dir='../Images_Data/CV_10_Folding/Fold_1/Results/Models_flat/Models_lm_2/'
-> landmarks='2,12,11,10,5'
+> target_dir='../Images_Data/CV_10_Folding/Fold_1/temp_test_lm/' <br>
+> input_dir='../Images_Data/CV_10_Folding/Fold_1/temp_test_png/' <br>
+> checkpoint='../Images_Data/CV_10_Folding/Fold_1/Models/Models_flat/Models_lm_2/' <br>
+> output_dir='../Images_Data/CV_10_Folding/Fold_1/Results/Models_flat/Models_lm_2/' <br>
+> landmarks='2,12,11,10,5' <br>
 > python3 Pr_LandMarkDetection_FlatArc+HeatMap.py --mode 'test'   --input_dir   $input_dir     --target_dir  $target_dir    --checkpoint  $checkpoint     --output_dir  $output_dir     --landmarks  $landmarks 
 
 The predicted landmarks plus the truth locations would be saved in csv files. Also a visualization image of the prediction will be saved:

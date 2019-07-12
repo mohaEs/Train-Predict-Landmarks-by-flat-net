@@ -1,4 +1,4 @@
-# Train-Predict-Landmarks-by-flat
+# Train-Predict-Landmarks-by-flat-net
 
 This network architecture is presented in which detects the locations of landmarks for vocal tract area.<br>
 The network is based on heatmap generation and location of the argmax.

@@ -5,7 +5,7 @@ The network is based on heatmap generation and location of the argmax.
 
 # Paper:
 This code is used for the following research. If you found it usefull, please cite the following document:
-
+https://www.nature.com/articles/s41598-020-58103-6
 @article{eslami2020automatic,
   title={Automatic vocal tract landmark localization from midsagittal MRI data},
   author={Eslami, Mohammad and Neuschaefer-Rube, Christiane and Serrurier, Antoine},
@@ -17,7 +17,13 @@ This code is used for the following research. If you found it usefull, please ci
   publisher={Nature Publishing Group}
 }
 
-https://www.nature.com/articles/s41598-020-58103-6
+Following repositories are also used for the mentioned paper:
+
+https://github.com/mohaEs/Train-Predict-Landmarks-by-DAN
+https://github.com/mohaEs/Train-Predict-Landmarks-by-MCAM
+https://github.com/mohaEs/Train-Predict-Landmarks-by-Autoencoder
+https://github.com/mohaEs/Train-Predict-Landmarks-by-dlib
+https://github.com/mohaEs/Train-Predict-Landmarks-by-SFD
 
 
 ## set up

@@ -3,6 +3,22 @@
 This network architecture is presented in which detects the locations of landmarks for vocal tract area.<br>
 The network is based on heatmap generation and location of the argmax.
 
+# Paper:
+This code is used for the following research. If you found it usefull, please cite the following document:
+
+@article{eslami2020automatic,
+  title={Automatic vocal tract landmark localization from midsagittal MRI data},
+  author={Eslami, Mohammad and Neuschaefer-Rube, Christiane and Serrurier, Antoine},
+  journal={Scientific Reports},
+  volume={10},
+  number={1},
+  pages={1--13},
+  year={2020},
+  publisher={Nature Publishing Group}
+}
+
+https://www.nature.com/articles/s41598-020-58103-6
+
 
 ## set up
 code is based on the tensorflow 1.14 which the embedded keras is also used.
